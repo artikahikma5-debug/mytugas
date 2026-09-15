@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body style="margin: 40px;">
+   <h2>form pengumpulan tugas</h2>
+    <form action="#" style="width: 50%;">
+       <fieldset style="margin-bottom: 1%;">
+        <legend>akun</legend>
+
+         <div class="form-group">
+            <label for="nama">nama lengkap:</label>
+            <input type="text" name="nama" id="nama">
+        </div>
+
+        <div class="form-group">
+            <label for="pass">password:</label>
+            <input type="confirm-password" id="pass" name="password">
+        </div>
+       
+       <div class="form-group">
+         <label for="alamat">alamat web:</label><br>
+         <textarea name="alamat" id="alamat" rows="3" cols="30" ></textarea>
+       </div>
+
+        <div class="form-group" style="align-items: flex-start;">
+            <label>kom:</label>
+            <div class="option-group">
+                  <input type="radio" id="a" name="kelas" value="a">
+                  <label for="a">a</label>
+            </div>
+
+            <div class="form-group" style="align-items: flex-start;">
+
+                  <input type="radio" id="b" name="kelas" value="b">
+                  <label for="b">b</label>
+            </div>
+
+            <div class="form-group">
+                  <input type="radio" id="c" name="kelas" value="c">
+                  <label for="c">c</label>
+            </div>
+        </div>
+
+        <P>
+        <div class="checks">
+               <input type="checkbox" name="setuju" value="setuju">
+               <label>saya menyetujui syarat dan ketentuan</label>
+        </div>
+        </P>
+       
+        </div>
+       </fieldset>
+       
+
+        <p>
+            <div class="form-group">
+                 <input type="submit" value="submit">
+        </p>
+
+        <label for="mata kuliah"> pilih mata kuliah</label>
+        <select name="mata kuliah" id="mata kuliah">
+           <option value="Dasar Pemrograman">Dasar Pemrograman</option>
+           <option value="Pemrograman Web">Pemrograman Web</option>
+           <option value="Pengantar Teknologi Informasi">Pengantar Teknologi Informasi</option>  
+        </select>
+           
+
+        
+    </form>
+</body>
+</html>
