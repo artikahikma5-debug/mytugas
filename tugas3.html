@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 3</title>
+    <style>
+        .letak {
+            border: 2px solid;
+            padding: 10px;
+        }
+        .posisi {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .posisi label {
+            width: 105px;
+        }
+    </style>
+</head>
+<body>
+        <div class="letak">
+            <form name="kalkulator">
+                <div class="posisi">
+                    <label for="bil1">input bilangan 1</label>
+                    <input style="background-color: pink;" type="number" name="bil1" id="bill1">
+                </div>
+
+                <div class="posisi">
+                    <label for="bil2">input bilangan 2</label>
+                    <input style="background-color: pink;" type="number" name="bil2" id="bill2">
+                </div>
+
+            <div class="posisi">
+                <span style="width: 105px; display: inline-block;"></span>
+                <button style="background-color: pink;" onclick="hitung('+')" type="button" name="btnSubmit">+</button>
+                <button style="background-color: pink;" onclick="hitung('-')" type="button" name="btnSubmit">-</button>
+                <button style="background-color: pink;" onclick="hitung('*')" type="button" name="btnSubmit">x</button>
+                <button style="background-color: pink;" onclick="hitung('/')" type="button" name="btnSubmit">/</button>
+            </div>
+
+            <div class="posisi">
+                <label for="output">output</label>
+                <input style="background-color: pink;" type="text" name="output" id="output">
+            </div>
+
+
+
+            <script>
+                function hitung(operator) {
+                    let bil1 = parseFloat(document.kalkulator.bill1.value)
+                    let bil2 = parseFloat(document.kalkulator.bill2.value)
+                    let hasil = 0
+
+                    if (operator === '+'){
+                        hasil = bil1 + bil2;
+                    } else if(operator === '-') {
+                        hasil = bil1 - bil2;
+                    } else if (operator ==='*') {
+                        hasil = bil1 * bil2;
+                    } else if (operator === '/') {
+                        if (bil2 === 0) {
+                            hasil = "gak bisa di bagi nol loh yaa"
+                        } else{
+                            hasil = bil1 / bil2;
+                        }
+                    }
+                    document.kalkulator.output.value = hasil;
+                }
+            </script>
+
+            </form>
+        </div>
+</body>
+</html>
